@@ -1,0 +1,11 @@
+.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-font-family: "Rockwell";
+}
+
+.header{
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-font-family: "Rockwell";
+}

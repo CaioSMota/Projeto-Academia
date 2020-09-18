@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="288.0" prefWidth="600.0" stylesheets="@/css/Padrao.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarExercicioController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" style="-fx-font-size: 22;" text="Cadastrar Exercicio">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageExercicio" fitHeight="150.0" fitWidth="150.0" layoutX="379.0" layoutY="76.0" pickOnBounds="true">
+         <image>
+            <Image url="@/imgs/image.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="379.0" layoutY="59.0" text="Foto Exercicio" />
+      <Button layoutX="401.0" layoutY="237.0" mnemonicParsing="false" onAction="#CarregarImagem" text="Escolher Imagem" />
+      <Button fx:id="btnCadastrar" layoutX="25.0" layoutY="239.0" mnemonicParsing="false" onAction="#cadastrarEx" text="Cadastrar" />
+      <GridPane layoutX="25.0" layoutY="70.0" prefHeight="90.0" prefWidth="300.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="93.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="10.0" prefWidth="207.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txtNomeExercicio" GridPane.columnIndex="1" />
+            <Label text="Nome :" />
+            <Label text="Aparelho :" GridPane.rowIndex="1" />
+            <ComboBox fx:id="combAparelho" prefHeight="25.0" prefWidth="212.0" promptText="Nome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

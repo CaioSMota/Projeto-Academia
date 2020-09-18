@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="323.0" prefWidth="457.0" stylesheets="@/css/Padrao.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AlterarDadosController">
+   <children>
+      <Label layoutX="31.0" layoutY="35.0" style="-fx-font-size: 22;" text="Alterar Dados">
+         <font>
+            <Font name="Rockwell" size="20.0" />
+         </font>
+      </Label>
+      <HBox layoutX="164.0" layoutY="323.0" spacing="10.0" />
+      <HBox layoutX="172.0" layoutY="268.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#LimparCampos" text="Limpar Campos">
+               <font>
+                  <Font name="Rockwell" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#SalvarDados" text="Salvar">
+               <font>
+                  <Font name="Rockwell" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <GridPane layoutX="24.0" layoutY="70.0" prefHeight="170.0" prefWidth="442.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="89.0" />
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="269.0" minWidth="133.0" prefWidth="176.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Peso :">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Altura :" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <Label text="Senha :" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPeso" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtAltura" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passSenha" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </PasswordField>
+            <Label text="Telefone : " GridPane.rowIndex="3">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTel" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </TextField>
+            <Label text="Problemas De Saude" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Rockwell" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtProblema" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Rockwell" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

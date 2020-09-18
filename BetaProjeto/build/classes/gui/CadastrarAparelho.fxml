@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="205.0" prefWidth="273.0" stylesheets="@/css/Padrao.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarAparelhoController">
+   <children>
+      <Label layoutX="24.0" layoutY="24.0" style="-fx-font-size: 22;" text="Cadastrar Aparelho">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="92.0" text="Nome" />
+      <TextField fx:id="txtNomeAparelho" layoutX="96.0" layoutY="88.0" />
+      <Button fx:id="btnLimpar" layoutX="24.0" layoutY="145.0" mnemonicParsing="false" onAction="#LimparCampos" text="Limpar Campos" />
+      <Button fx:id="btnCadastrar" layoutX="164.0" layoutY="145.0" mnemonicParsing="false" onAction="#Cadastrar" text="Cadastrar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="670.0" stylesheets="@/css/Padrao.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarAlunoController">
+   <children>
+      <Label layoutX="26.0" layoutY="28.0" style="-fx-font-size: 22;" text="Cadastrar Aluno">
+         <font>
+            <Font name="Rockwell" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="26.0" layoutY="69.0" prefHeight="415.0" prefWidth="318.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="152.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="166.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome" />
+            <Label text="Sobrenome" GridPane.rowIndex="1" />
+            <Label text="Altura" GridPane.rowIndex="2" />
+            <Label text="Peso" GridPane.rowIndex="3" />
+            <Label text="Sexo" GridPane.rowIndex="4" />
+            <Label text="Data Nascimento" GridPane.rowIndex="5" />
+            <Label text="Telefone" GridPane.rowIndex="6" />
+            <Label text="Usuario" GridPane.rowIndex="7" />
+            <Label text="Senha" GridPane.rowIndex="8" />
+            <Label text="Objetivo" GridPane.rowIndex="9" />
+            <TextField fx:id="txtNome" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtSobrenome" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtAltura" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtPeso" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtTelefone" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtUser" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker fx:id="dateDataNasc" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="txtSenha" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="combSexo" prefWidth="150.0" promptText="Sexo" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="combObjetivo" prefWidth="150.0" promptText="Selecione" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </ComboBox>
+         </children>
+      </GridPane>
+      <ImageView fx:id="imageAluno" fitHeight="150.0" fitWidth="150.0" layoutX="390.0" layoutY="70.0" pickOnBounds="true">
+         <image>
+            <Image url="@/imgs/image.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnEscolherImg" layoutX="390.0" layoutY="231.0" mnemonicParsing="false" onAction="#CarregarImagem" text="Escolher Imagem" />
+      <Label layoutX="390.0" layoutY="50.0" text="Foto Aluno" />
+      <HBox layoutX="467.0" layoutY="459.0" spacing="15.0">
+         <children>
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#LimparCampos" text="Limpar Campos" />
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#Cadastrar" text="Cadastrar" />
+         </children>
+      </HBox>
+      <Label layoutX="385.0" layoutY="285.0" text="Problemas de Saude" />
+      <TextField fx:id="txtProbSaude" layoutX="385.0" layoutY="302.0" prefHeight="25.0" prefWidth="181.0" />
+   </children>
+</AnchorPane>
